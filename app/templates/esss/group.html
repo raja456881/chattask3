@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <form id="form1"  method="post" action="creategroup">
+     {% csrf_token %}
+ <table width="300" border="1">
+
+        <tr>
+          <td><label>ALL User Name </label></td>
+          <td><select name="select"  multiple="multiple" tabindex="1">
+                {% for i in user %}
+              <h1>{{i.id]}</h1>
+            <option value={{i.id}}>{{i.username}}</option>
+              {% endfor %}
+          </select>
+          </td>
+        </tr>
+        <tr>
+            <input type="text" name="group" PLACEHOLDER="Enter the group name" >
+          <td>&nbsp;</td>
+          <td><input type="submit" name="Submit" value="Submit"  /></td>
+        </tr>
+      </table>
+</form>
+</body>
+</html>
